@@ -9,7 +9,6 @@ class Song
     artist, song, genre = file.split(' - ')
     temp = Song.new(song)
     temp.artist = Artist.new(artist)
-    temp.artist.add_song(temp)
     temp.artist.save
     temp
   end
