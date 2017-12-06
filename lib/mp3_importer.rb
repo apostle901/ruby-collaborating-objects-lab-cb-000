@@ -3,7 +3,12 @@ class MP3Importer
 
   def initialize(file)
     @path = file
-    @files = Dir.entries(file)
+    @files = []
+    input_songs
+  end
+
+  def input_songs
+    @files = Dir.entries(@path)
     @files.shift
     @files.shift
   end
