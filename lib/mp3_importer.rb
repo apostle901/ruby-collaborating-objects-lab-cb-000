@@ -9,7 +9,7 @@ class MP3Importer
 
   def input_songs
     @files = Dir.entries(@path)
-    @files.shift
-    @files.shift
+    @files.delete('.')
+    @files.delete('..')
   end
 end
