@@ -10,6 +10,7 @@ class Song
     temp = Song.new(song)
     temp.artist = Artist.new(artist)
     temp.artist.add_song(temp)
+    temp.artist.save
     temp
   end
 end
