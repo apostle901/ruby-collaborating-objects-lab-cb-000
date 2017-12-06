@@ -8,7 +8,7 @@ class Song
   def self.new_by_filename(file)
     artist, song, genre = file.split(' - ')
     temp = Song.new(song)
-    temp.artist = Artist.new(artist)
+    temp.artist = Artist.find_or_create_by_name(artist)
     temp.artist.save
     temp
   end
