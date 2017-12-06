@@ -19,4 +19,8 @@ class Artist
   def save
     @@all << self
   end
+
+  def self.find_or_create_by_name(artist)
+    @@all.find {|s| s.name == artist } || Artist.new(artist)
+  end
 end
